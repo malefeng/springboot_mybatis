@@ -1,11 +1,11 @@
 package com.fengji.smdemo.service;
 
-import com.fengji.smdemo.entity.User;
+import com.fengji.smdemo.entity.UserDO;
 
 import java.util.List;
 
 public interface IUserInfoService {
-    List<User> listUser();
+    List<UserDO> listUser();
 
-    User findUser(int id);
+    UserDO findUser(int id);
 }

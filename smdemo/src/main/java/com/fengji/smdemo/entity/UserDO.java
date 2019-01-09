@@ -1,6 +1,6 @@
 package com.fengji.smdemo.entity;
 
-public class User {
+public class UserDO {
     private Integer userId;
 
     private String userName;
@@ -39,5 +39,12 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
+    }
+
+    public UserDO(Integer userId, String userName, String password, String phone) {
+        this.userId = userId;
+        this.userName = userName;
+        this.password = password;
+        this.phone = phone;
     }
 }

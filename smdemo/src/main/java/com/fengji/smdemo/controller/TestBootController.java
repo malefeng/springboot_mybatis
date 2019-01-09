@@ -1,6 +1,6 @@
 package com.fengji.smdemo.controller;
 
-import com.fengji.smdemo.entity.User;
+import com.fengji.smdemo.entity.UserDO;
 import com.fengji.smdemo.service.IUserInfoService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
-//import java.util.List;
 
-@RestController()
+@RestController
 @RequestMapping("/test")
 public class TestBootController {
 
@@ -20,13 +19,13 @@ public class TestBootController {
 
     @RequestMapping(value="showUserInfo")
     @ResponseBody
-    public List<User> test(){
+    public List<UserDO> test(){
         return userInfoService.listUser();
     }
 
     @RequestMapping("findUser")
     @ResponseBody
-    public User findUser(@RequestParam  int id){
+    public UserDO findUser(@RequestParam  int id){
         return userInfoService.findUser(id);
     }
 }

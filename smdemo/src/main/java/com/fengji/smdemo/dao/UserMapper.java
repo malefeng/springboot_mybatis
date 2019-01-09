@@ -1,23 +1,22 @@
 package com.fengji.smdemo.dao;
 
 
-import com.fengji.smdemo.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fengji.smdemo.entity.UserDO;
 
 import java.util.List;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer userId);
 
-    int insert(User record);
+    public int insert(UserDO record);
 
-    int insertSelective(User record);
+    int insertSelective(UserDO record);
 
-    User selectByPrimaryKey(Integer userId);
+    UserDO selectByPrimaryKey(Integer userId);
 
-    int updateByPrimaryKeySelective(User record);
+    int updateByPrimaryKeySelective(UserDO record);
 
-    int updateByPrimaryKey(User record);
+    int updateByPrimaryKey(UserDO record);
 
-    List<User> listUserInfo();
+    List<UserDO> listUserInfo();
 }
